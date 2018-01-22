@@ -1,14 +1,15 @@
 {
-  "name": "webpack-util-preprocessor",
-  "version": "0.0.1",
-  "description": "webpack loader which adds some utility functions as preprocessor directives",
+  "name": "webpack-compass-imagehelper",
+  "version": "0.0.6",
+  "description": "gulp-compass-imagehelper clone for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
+  
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nick-less/webpack-util-preprocessor.git"
+    "url": "git+https://github.com/nick-less/webpack-compass-imagehelper.git"
   },
   "keywords": [
     "webpack",
@@ -16,9 +17,23 @@
     "sizes"
   ],
   "author": "Harry Schittler",
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nick-less/webpack-util-preprocessor/issues"
+    "url": "https://github.com/nick-less/webpack-compass-imagehelper/issues"
   },
-  "homepage": "https://github.com/nick-less/webpack-util-preprocessor#readme"
+  "homepage": "https://github.com/nick-less/webpack-compass-imagehelper#readme",
+  "devDependencies": {
+      "mocha": "^5.0.0"
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "canonical-path": "0.0.2",
+    "write": "^1.0.3",
+    "image-size": "^0.6.2",
+    "md5": "^2.0.0",
+    "mime": "~2.2.0",
+    "mustache": "~2.3.0",
+	"glob": "~7.1.2"
+  }
+  
 }
