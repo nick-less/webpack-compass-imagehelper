@@ -1,11 +1,11 @@
-== webpack-compass-imagehelper
+## webpack-compass-imagehelper
 
 
 this is copied from https://github.com/phlppschrr/gulp-compass-imagehelper and adjusted to work with webpack instead of gulp, it lets
 you use the compass image helper functions together with a webpack/sass-loader enviroment.
 
 
-=== plugin options
+### plugin options
 
 ```javascript
 new CompassImageHelperPlugin({
@@ -24,7 +24,7 @@ the image infos including a inlined data version. The default mustache template 
 each image. Feel free to modify the template to your needs. Additional there are the following helper function which mimic 
 the native functions from Compass:
 
-## Supported Compass functions
+### Supported Compass functions
 * **inline-image($image):** Embeds the contents of an image directly inside your stylesheet. All images are currently base64 encoded, in a future version SVG images will be UTF-8 encoded.
 * **image-width($image):** Returns the width of the image found at the path supplied by $image. Warning, some SVG images may fail here and return `null`.
 * **image-height($image)** Returns the height of the image found at the path supplied by $image. Warning, some SVG images may fail here and return `null`.
