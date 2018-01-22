@@ -11,9 +11,9 @@ you use the compass image helper functions together with a webpack/sass-loader e
 new CompassImageHelperPlugin({
 			targetFile: 'target/_images.scss',
 			images_path: 'src/main/scss/',
-			pattern: ['resources/**/*'],
-            css_path: 'images/',
-            prefix: 'icon--'
+			pattern: 'resources/**/*',
+			css_path: 'images/',
+			prefix: 'icon--'
 		})
 ```
 
