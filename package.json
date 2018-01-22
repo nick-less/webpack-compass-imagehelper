@@ -1,6 +1,6 @@
 {
   "name": "webpack-compass-imagehelper",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "gulp-compass-imagehelper clone for webpack",
   "main": "index.js",
   "scripts": {

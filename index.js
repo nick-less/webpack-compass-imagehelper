@@ -22,6 +22,10 @@ function createImageAssetFile (options) {
 
 		  if (!options.prefix)
 		    options.prefix = '';
+		    
+			if (!options.sizeLimit)
+		    options.sizeLimit = 10240;
+
 
 		  var template = fs.readFileSync(options.template).toString();
 
@@ -104,7 +108,15 @@ function createImageAssetFile (options) {
 
  		glob(options.images_path+options.pattern, function (er, files) {
   				for (var i = 0; i < files.length; i++) {
-			 		bufferContents({path:files[i],contents:fs.readFileSync(files[i]), base:''})
+  				
+					var content = '';
+					var stats = fs.statSync(files[i]);
+					if (stats.size<options.sizeLimit) {
+						content = fs.readFileSync(files[i]);
+					}
+  				
+  				
+			 		bufferContents({path:files[i],contents:content, base:''})
 				}
 			   var fullPath =  options.targetFile;
 				write.sync(fullPath, 

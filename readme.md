@@ -13,6 +13,7 @@ new CompassImageHelperPlugin({
 			images_path: 'src/main/scss/',
 			pattern: 'resources/**/*',
 			css_path: 'images/',
+			sizeLimit: 10240, // size limit for image embedding
 			prefix: 'icon--'
 		})
 ```
