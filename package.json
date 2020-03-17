@@ -27,11 +27,11 @@
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
-    "canonical-path": "0.0.2",
+    "canonical-path": "1.0.0",
     "write": "^1.0.3",
     "image-size": "^0.6.2",
     "md5": "^2.0.0",
-    "mime": "~2.2.0",
+    "mime": "~2.4.4",
     "mustache": "~2.3.0",
 	"glob": "~7.1.2"
   }
