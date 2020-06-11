@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/nick-less/webpack-compass-imagehelper#readme",
   "devDependencies": {
-    "mocha": "^7.1.0"
+    "mocha": "^8.0.1"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
