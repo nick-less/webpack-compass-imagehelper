@@ -4,7 +4,8 @@
   "description": "gulp-compass-imagehelper clone for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublishOnly": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
