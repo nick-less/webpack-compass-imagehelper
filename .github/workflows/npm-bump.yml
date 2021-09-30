@@ -29,7 +29,7 @@ jobs:
     - name: Version and publish to npm
       uses: bcomnes/npm-bump@v1.0.4
       with:
-        git_email: bcomnes@gmail.com
+        git_email: nick-less@gmx.de
         git_username: ${{ github.actor }}
         newversion: ${{ github.event.inputs.newversion }}
         push_version_commit: true # if your prePublishOnly step pushes git commits, you can omit this input or set it to false.
