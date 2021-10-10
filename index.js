@@ -120,7 +120,7 @@ function createImageAssetFile (options) {
 				}
 			   var fullPath =  options.targetFile;
 				write.sync(fullPath, 
-				new Buffer(mustache.render(template, {
+				    Buffer.from(mustache.render(template, {
 		        	prefix: options.prefix,
 		        	path_prefix: pathPrefix(),
 		        	items: images,

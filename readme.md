@@ -8,6 +8,10 @@ you use the compass image helper functions together with a webpack/sass-loader e
 ### plugin options
 
 ```javascript
+const CompassImageHelperPlugin = require('webpack-compass-imagehelper');
+
+...
+
 new CompassImageHelperPlugin({
 			targetFile: 'target/_images.scss',
 			images_path: 'src/main/scss/',

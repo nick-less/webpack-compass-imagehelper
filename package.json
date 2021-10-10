@@ -1,6 +1,6 @@
 {
   "name": "webpack-compass-imagehelper",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "gulp-compass-imagehelper clone for webpack",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,10 @@
   },
   "homepage": "https://github.com/nick-less/webpack-compass-imagehelper#readme",
   "devDependencies": {
-   "auto-changelog": "^2.3.0",
-   "gh-release": "^6.0.1",
-   "mocha": "^9.0.0"
+    "auto-changelog": "^2.3.0",
+    "webpack": "^4",
+    "gh-release": "^6.0.1",
+    "mocha": "^9.0.0"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
