@@ -101,36 +101,54 @@ function createImageAssetFile (options) {
 
 		    imageInfo.hash = md5(file.contents);
 		    imageInfo.data = 'url("data:' + mimetype + ';' + encoding + ',' + data + '")';
-
 		    images.push(imageInfo);
 
 		  };
 
  		glob(options.images_path+options.pattern, function (er, files) {
-  				for (var i = 0; i < files.length; i++) {
-  				
-					var content = '';
-					var stats = fs.statSync(files[i]);
-					if (stats.size<options.sizeLimit) {
-						content = fs.readFileSync(files[i]);
-					}
-  				
-  				
-			 		bufferContents({path:files[i],contents:content, base:''})
+			var changed =  true
+			var newestFile = 0;
+			var outfileTime = 0;
+			if (fs.existsSync(options.targetFile)) {
+					var outputFs  = fs.statSync( options.targetFile);
+					var templateFs = fs.statSync(options.template);
+					changed =  templateFs.mtime > outputFs.mtime || 0
+					outfileTime = outputFs.mtime;
 				}
-			   var fullPath =  options.targetFile;
-				write.sync(fullPath, 
-				    Buffer.from(mustache.render(template, {
-		        	prefix: options.prefix,
-		        	path_prefix: pathPrefix(),
-		        	items: images,
-		      })));
-		      console.log("webpack-compass-imagehelper: "+fullPath+" written for "+files.length+" images");
+				if (!changed) {
+					for (var i = 0; i < files.length; i++) {
+						var stats = fs.statSync(files[i]);
+						if (newestFile < stats.mtime) {
+							newestFile = stats.mtime;
+						}
+					}
+					changed = newestFile > outfileTime
+				}
+	
+				if (changed) {
+					for (var i = 0; i < files.length; i++) {
+  				
+						var content = '';
+						var stats = fs.statSync(files[i]);
+						if (stats.size<options.sizeLimit) {
+							content = fs.readFileSync(files[i]);
+						}
+					  
+					  
+						 bufferContents({path:files[i],contents:content, base:''})
+					}
+				   var fullPath =  options.targetFile;
+					write.sync(fullPath, 
+						Buffer.from(mustache.render(template, {
+						prefix: options.prefix,
+						path_prefix: pathPrefix(),
+						items: images,
+				  })));
+				  console.log("webpack-compass-imagehelper: "+fullPath+" written for "+files.length+" images");
+				} else {
+					console.log('webpack-compass-imagehelper: no changes in ' + files.length + ' image files')
+				}
 			})
-
-	/*
-      
-		*/
 
 	}
 	
