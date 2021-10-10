@@ -27,15 +27,15 @@
     "auto-changelog": "^2.3.0",
     "webpack": "^4",
     "gh-release": "^6.0.1",
-    "mocha": "^9.0.0"
+    "mocha": "^9.1.2"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
     "canonical-path": "1.0.0",
     "write": "^2.0.0",
     "image-size": "^1.0.0",
-    "md5": "^2.2.1",
-    "mime": "~2.5.0",
+    "md5": "^2.3.0",
+    "mime": "^2.5.2",
     "mustache": "~4.2.0",
     "glob": "~7.2.0"
   }
