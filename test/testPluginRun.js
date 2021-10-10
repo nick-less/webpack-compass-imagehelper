@@ -11,12 +11,12 @@ describe('Array', function() {
       }
     })
     var size = 8946;
-    var fstats = fs.statSync('./dist/_images.scss')
-    console.log(fstats)
     it('should generate a file ', function() {
+      var fstats = fs.statSync('./dist/_images.scss')
       assert.notEqual(null, fstats)
     });
     it('should generate a file of ' + size + ' bytes', function() {
+      var fstats = fs.statSync('./dist/_images.scss')
       assert.equal(size, fstats.size)
     });
   });
