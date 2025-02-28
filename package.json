@@ -33,7 +33,7 @@
     "app-root-path": "^3.0.0",
     "canonical-path": "1.0.0",
     "write": "^2.0.0",
-    "image-size": "^1.0.0",
+    "image-size": "^2.0.0",
     "md5": "^2.3.0",
     "mime": "^4.0.0",
     "mustache": "~4.2.0",
